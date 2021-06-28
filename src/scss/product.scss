@@ -7,7 +7,6 @@ html,body {
     max-width:1140px;
     padding:0px 15px;
 }
-
 .header_bar{
     @include bar;
     height:50px;
@@ -115,7 +114,7 @@ html,body {
     }   
 }
 .burger_height_show .burger_menu {
-     max-height:500px;
+    max-height:500px;
 }
 .nav_bar {
     background-color: $main_color;
@@ -150,9 +149,6 @@ html,body {
     @media (max-width:767px){
         width:48%;
     }
-    @media (max-width:414px){
-        width:100%;
-    }
 }
 .all_product_list {
     display:flex;
@@ -166,16 +162,16 @@ html,body {
         margin:0 1%;
     }
     .card_img_wrap{
+        display:block;
         width:100%;
-        max-height:255px;
-        min-height:165px;
+        height:255px;
+        @media (max-width:414px){
+            margin:0 1%;
+            height:165px;
+        }
         img {
-            width:100%;
-            height:255px;
-            object-fit: fill;
-            @media (max-width:767px){
-                height:200px;
-            }
+        width:100%;
+        height:100%;
         }
     }
     .card_content {
@@ -329,5 +325,3 @@ html,body {
     }
 }
 }
-
-
