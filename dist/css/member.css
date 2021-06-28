@@ -234,19 +234,17 @@
 }
 @media (max-width: 767px) {
   .member .member_side_list .member_side li {
-    margin-right: 20px;
-    width: 33.3333%;
-  }
-}
-@media (max-width: 414px) {
-  .member .member_side_list .member_side li {
-    margin-right: 10px;
     text-align: center;
   }
 }
 .member .member_side_list .member_side a {
   text-decoration: none;
   color: #8D8D8D;
+}
+@media (max-width: 767px) {
+  .member .member_side_list .member_side a {
+    text-align: center;
+  }
 }
 .member .member_side_list .member_side a:hover {
   border-bottom: 2px solid #916000;
