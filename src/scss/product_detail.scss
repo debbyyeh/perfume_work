@@ -296,9 +296,11 @@ html,body {
         }
     }
 }
+.footer-fluid {
+    background-color: $main_color;
+}
 .footer_bar {
     @include bar;
-    background-color: $main_color;
     h6 a{
         @include word_hidden;
         background-image:url(https://upload.cc/i1/2021/06/13/6sfMxS.png);
