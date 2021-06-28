@@ -168,21 +168,18 @@
                 margin-bottom: 24px;
                 margin-right: 40px;
                 @media (max-width:767px){
-                    margin-right:20px;
-                    width:33.3333%;
-                }
-                @media (max-width:414px){
-                    margin-right: 10px;
                     text-align:center;
                 }
-                
             }
             a {
                 text-decoration: none;
                 color:$color_grey;
+                @media (max-width:767px){
+                    text-align:center;
+                }
                 &:hover {
                     border-bottom: 2px solid $main_color;
-                    }
+                }
             }
         } 
     } 
