@@ -196,7 +196,7 @@
             height:38px;
             @include input_btn($main_color);
             background-color: $color_white;
-            margin-right: 5%;
+            margin-right: 8px;
             text-align: center;
             @include word (16px,22px);
             color:$main_color;
@@ -213,9 +213,11 @@
         }
     }
 }
+.footer-fluid {
+    background-color: $main_color;
+}
 .footer_bar {
     @include bar;
-    background-color: $main_color;
     h6 a{
         @include word_hidden;
         background-image:url(https://upload.cc/i1/2021/06/13/6sfMxS.png);
