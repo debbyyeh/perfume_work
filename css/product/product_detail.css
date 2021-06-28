@@ -377,8 +377,8 @@ html, body {
   width: 50%;
   padding: 20px;
   border-radius: 4px 0px 0px 4px;
-  -webkit-box-shadow: 0 0 1px #916000;
-          box-shadow: 0 0 1px #916000;
+  -webkit-box-shadow: 0 0 2px #916000;
+          box-shadow: 0 0 2px #916000;
   border: none;
   font-size: 16px;
   line-height: 22px;
