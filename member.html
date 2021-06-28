@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="dist/css/all.css">
+    <link rel="stylesheet" href="dist/css/member.css">
+    <title>Member</title>
+</head>
+
+<body>
+    <div class="container header_bar">
+        <h1><a href="#">D'Perfume</a></h1>
+        <ul class="header_menu">
+            <li><a href="#" class="header_menu_list"><i class="fas fa-store-alt"></i>Product</a></li>
+            <li><a href="#" class="header_menu_list"><i class="fas fa-user"></i>Log in</a>
+            </li>
+            <li><a href="#" class="header_menu_list"><i class="fas fa-heart"></i>Wishlist</a></li>
+            <li><a href="#" class="header_menu_list"><i class="fas fa-shopping-cart"></i>Cart(3)</a>
+            </li>
+        </ul>
+        <div class="header_mb">
+            <a href="#" class="burger_cart">
+                <i class="fas fa-shopping-cart fa-2x"></i><span>3</span>
+            </a>
+            <a href="#" class="burger_btn">
+                <i class="fas fa-bars fa-2x"></i>
+            </a>
+            <ul class="burger_show burger_menu">
+                <li><a href="#">Product</a></li>
+                <li><a href="#">Wishlist</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">log in</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="container-fluid nav_bar">
+        <ul class="container nav_bar_list">
+            <li><a href="">CHANEL</a></li>
+            <li><a href="">Jo Malone</a></li>
+            <li><a href="">Curology</a></li>
+            <li><a href="">Dior</a></li>
+            <li><a href="">Chloe</a></li>
+            <li><a href="">ZARA</a></li>
+        </ul>
+    </div>
+    <div class="container member">
+        <div class="member_side_list">
+            <h2>會員中心</h2>
+            <ul class="member_side">
+                <li class="member_info_edit"><a href="#">會員資料修改</a></li>
+                <li><a href="#">訂單查詢</a></li>
+                <li><a href="#">退／換貨申請</a></li>
+            </ul>
+        </div>
+        <div class="member_info reverse">
+            <div class="member_content">
+                <div class="member_title member_user">
+                    <i class="fas fa-user"></i>
+                    <h3>會員編碼</h3><span>T00020080615</span>
+                </div>
+                <div class="member_title cartNum">
+                    <p>購物車</p><span>56</span>
+                </div>
+                <div class="member_title save">
+                    <p>我的收藏</p><span>23</span>
+                </div>
+                <div class="member_title finishOrder">
+                    <p>完成訂單</p><span>8</span>
+                </div>
+                <div class="member_title bonus">
+                    <p>會員紅利</p><span>2680</span>
+                </div>
+                <div class="member_title bonus_link">
+                    <p>邀請碼</p><span>TK2075</span>
+                </div>
+                <small>新戶輸入邀請碼即可獲贈紅利點數1000點</small>
+            </div>
+            <div class="member_edit">
+                <form>
+                    <h4>個人資料修改</h4>
+                    <div class="form-group">
+                        <label for="account" class="form-title">會員帳號</label>
+                        <input type="text" name="account" id="account" value="email@example.com" class="account_border">
+                    </div>
+                    <div class="form-group">
+                        <label for="name" class="form-title">會員姓名</label>
+                        <input type="text" name="userName" id="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="gender" class="form-title">會員性別</label>
+                        <select name="gender">
+                            <option value="male">男</option>
+                            <option value="female" selected>女</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="form-title">電子信箱</label>
+                        <input type="email" id="email" placeholder="email@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="tel" class="form-title">手機號碼</label>
+                        <input type="tel" id="tel">
+                    </div>
+                    <div class="form-group address-title">
+                        <label for="address" class="form-title">聯絡地址</label>
+                        <div class="address">
+                            <div class="send_address_country">
+                                <select>
+                                    <outgroup label="country">
+                                        <option value="country">台灣及離島</option>
+                                        <option value="country">國外</option>
+                                    </outgroup>
+                                </select>
+                            </div>
+                            <div class="send_address_city">
+                                <select name="send_address_city">
+                                    <outgroup label="city">
+                                        <option value="city" selected>高雄市</option>
+                                        <option value="city">台北市</option>
+                                    </outgroup>
+                                </select>
+                                <select name="send_address_dis">
+                                    <outgroup label="city">
+                                        <option value="city" selected>鹽埕區</option>
+                                    </outgroup>
+                                </select>
+                            </div>
+                            <div class="send_address_text">
+                                <input type="text" id="send_address_city" placeholder="請輸入地址">
+                                <!-- <input type="checkbox" name="news" id="check_btn">
+                                <label for="check_btn">我願意收到最新優惠情報</label> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group address-title">
+                        <label for="address" class="form-title">配送地址</label>
+                        <div class="address">
+                            <div class="send_address_country">
+                                <select>
+                                    <outgroup label="country">
+                                        <option value="country">台灣及離島</option>
+                                        <option value="country">國外</option>
+                                    </outgroup>
+                                </select>
+                            </div>
+                            <div class="send_address_city">
+                                <select name="send_address_city">
+                                    <outgroup label="city">
+                                        <option value="city" selected>高雄市</option>
+                                        <option value="city">台北市</option>
+                                    </outgroup>
+                                </select>
+                                <select name="send_address_dis">
+                                    <outgroup label="city">
+                                        <option value="city" selected>鹽埕區</option>
+                                    </outgroup>
+                                </select>
+                            </div>
+                            <input type="text" id="send_address_city" placeholder="請輸入地址">
+                            <button>確定修改</button>
+                        </div>
+                    </div>
+                    <h4>修改密碼</h4>
+                    <div class="form-group">
+                        <label for="oldPwd" class="form-title">舊密碼</label>
+                        <input type="password" name="password" id="oldPwd">
+                    </div>
+                    <div class="form-group">
+                        <label for="newPwd" class="form-title">新密碼</label>
+                        <input type="password" name="password" id="newPwd">
+                    </div>
+                    <div class="form-group address-title">
+                        <label for="confirmPwd" class="form-title">確認密碼</label>
+                        <div class="change_pwd">
+                            <input type="password" name="password" id="confirmPwd">
+                            <button>變更密碼</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-fluid">
+            <div class="container footer_bar">
+                <div class="footer_logo">
+                    <h6><a href="#">D'Perfume</a></h6>
+                    <span>© 2020. All Rights Reserved.</span>
+                </div>
+                <ul class="footer_menu">
+                    <li><a href="#">Product</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="dist/js/index.js"></script>
+</body>
+
+</html>

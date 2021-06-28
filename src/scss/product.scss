@@ -1,0 +1,333 @@
+@import "mixin";
+html,body {
+    overflow-x: hidden;
+}
+.container {
+    margin: 0 auto;
+    max-width:1140px;
+    padding:0px 15px;
+}
+
+.header_bar{
+    @include bar;
+    height:50px;
+    position:relative;
+    @media(max-width:767px){
+        
+    }
+    h1 a {
+        @include word_hidden;
+        background-image:url(https://upload.cc/i1/2021/06/13/PWFOAJ.png);
+        width:130px;
+        height:38px;
+    }
+    .header_menu {
+    display:flex;
+    align-items: center;
+    float:right;
+    @media (max-width:767px){
+        display:none;
+    }
+    li{
+        margin-right: 16px;
+    }
+    a{
+        text-decoration: none;
+        color:$color_grey;
+        display:block;
+        padding: 16px;
+        &:hover {
+            border-bottom: 2px solid #8D8D8D;
+        }
+    }
+    .fas {
+    margin-right: 3px;
+    }
+}
+}
+.clearfix {
+    clear: both;
+}
+.header_mb {
+    display:none;
+    a {
+        text-decoration: none;
+        margin-right: 8px;
+        .fas {
+            color:$color_grey;
+            line-height:15px;
+        }
+    }
+    .burger_cart {
+        position:relative;
+        span {
+        position:absolute;
+        border-radius: 7px;
+        border:1px solid $main_color;
+        background-color: $main_color;
+        padding:0px 3px;
+        top:-15px;
+        left:30px;
+        color:$color_white;
+        text-align: center;
+    }
+    }
+    @media (max-width:767px){
+        display:block;
+        display:flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin-top: 12px;
+        .fas {
+            margin-right: 8px;
+        }
+    }
+}
+.burger_show {
+    @media (max-width:767px){
+    max-height:0px; 
+    overflow: hidden;
+    transition:max-height 1.5s;
+    margin-top: 1px;
+    position:absolute;
+    top:51px;
+    left:0px;
+    right:0px;
+    z-index:100;
+    li {
+        background-color:#707070;
+        text-align: center;
+        padding:16px 0px;
+        border-bottom: 1px solid $color_white;
+        &:hover {
+            background-color: $color_lightgrey;
+        }
+    }
+    a {
+        @include word (20px,30px);
+        text-decoration: none;
+        color:$color_white;
+        display:block;
+        &:hover {
+            color:$color_black;
+        }
+    }  
+    }   
+}
+.burger_height_show .burger_menu {
+     max-height:500px;
+}
+.nav_bar {
+    background-color: $main_color;
+    margin-bottom: 60px;
+    @media (max-width:767px){
+        display:none;
+    }
+    .nav_bar_list {
+    display:flex;
+    justify-content: flex-start;
+    li {
+        &:hover {
+            background-color: $sub_color;
+        }
+    }
+    a {
+        @include word(20px,30px);
+        text-decoration: none;
+        color:$color_white;
+        display:block;
+        padding:5px 10px;
+    }
+}
+}
+.col-4 {
+    width: 23%;
+    display:flex;
+    flex-direction: column;
+    @media (max-width:992px){
+        width:30%;
+    }
+    @media (max-width:767px){
+        width:48%;
+    }
+    @media (max-width:414px){
+        width:100%;
+    }
+}
+.all_product_list {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    @media (max-width:767px){
+        margin-top: 40px;
+    }
+    li {
+        margin:0 1%;
+    }
+    .card_img_wrap{
+        width:100%;
+        max-height:255px;
+        min-height:165px;
+        img {
+            width:100%;
+            height:255px;
+            object-fit: fill;
+            @media (max-width:767px){
+                height:200px;
+            }
+        }
+    }
+    .card_content {
+        margin-bottom: 5px;
+        h2 {
+            @include word(24px,36px);
+            font-weight: bold;
+        }
+        h3 {
+            @include word (16px,24px);
+        }
+        p {
+            display:inline;
+            @include word (16px,24px);
+            margin-right: 8px;
+        }
+        span {
+            text-decoration: line-through;
+            color:$color_lightgrey;
+        }
+    }
+    .btn_wrapper {
+        margin-bottom: 60px;
+        @media (max-width:767px){
+            margin-bottom: 30px;
+        }
+        .shake:hover {
+        animation: shake 0.5s;
+        animation-iteration-count: infinite;
+        @keyframes shake {
+            0% { transform: translate(1px, 1px) rotate(0deg); }
+            100% { transform: translate(1px, -2px) rotate(-1deg); }
+            }
+        }
+        .fas {
+        color:$main_color;
+        }
+        .fa-heart:hover{
+        color:red;
+        }
+    }
+}
+.product_page {
+    @include position;
+    justify-content: center;
+    li{
+    margin: 0px 10px 60px 10px;}
+    a {
+        display:block;
+        padding: 5px;
+        text-decoration: none;
+        color:$color_black;
+        &:active {
+            color:$main_color;
+            text-decoration:underline;
+        }
+    }
+}
+.product_page_1 {
+    text-decoration:underline;
+}
+.subscribe {
+    background: url(https://upload.cc/i1/2021/06/13/ETI8wb.jpg) center/cover no-repeat;
+    height:600px;
+    position:relative;
+    @media (max-width:767px){
+        background-position:left;
+    }
+    .subscribe_content {
+    font-weight: bold;
+    position:absolute;
+    top:50%;
+    left:20%;
+    @media (max-width:767px){
+        top:70%;
+        left:50%;
+        transform:translate(-70%,-50%);
+    }
+    @media (max-width:414px){
+        top:60%;
+        left:60%;
+        transform:translate(-60%,-60%);
+         width:90%;
+    }
+    h5 {
+        @include word(32px,48px);
+        color:$color_grey;
+    }
+    .subscribe_info {
+        display:flex;
+        align-items: center;
+        margin-top: 20px;
+    }
+    .subscribe-enter {
+        width:50%;
+        border-radius:4px 0px 0px 4px;
+        border:1px solid $main_color;
+        outline: none;
+        padding: 20px;
+        @include word(16px,24px);
+    }
+    .subscribe-btn {
+        width:50%;
+        text-align:center;
+        color:$color_white;
+        border-radius:0px 4px 4px 0px;
+        background-color:$main_color;
+        text-decoration: none;
+        border:1px solid $main_color;
+        padding: 20px;
+        @include word(16px,24px);
+    }
+    }
+}
+.footer_bar {
+    @include bar;
+    background-color: $main_color;
+    h6 a{
+        @include word_hidden;
+        background-image:url(https://upload.cc/i1/2021/06/13/6sfMxS.png);
+        width:130px;
+        height:38px;
+        margin-right: 20px;
+    }
+    .footer_logo {
+    @include position;
+    span {
+        color:$color_white;
+    }
+    }
+    .footer_menu {
+    @include word(20px,30px);
+    @include position;
+    li {
+        padding:28px;
+    }
+    a {
+        text-decoration: none;
+        color:$color_white;
+        &:hover {
+          color:black;  
+        }
+    }
+    }
+    @media (max-width:767px){
+    .footer_logo {
+        margin: 0 auto;
+    }
+    .footer_menu {
+        display:none;
+    }
+}
+}
+
+

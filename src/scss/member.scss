@@ -1,0 +1,384 @@
+@import "mixin";
+.container {
+    margin: 0 auto;
+    max-width:1140px;
+    padding: 0px 15px;
+}
+.header_bar{
+    @include bar;
+    height:50px;
+    position:relative;
+    @media(max-width:767px){
+        
+    }
+    h1 a {
+        @include word_hidden;
+        background-image:url(https://upload.cc/i1/2021/06/13/PWFOAJ.png);
+        width:130px;
+        height:38px;
+    }
+    .header_menu {
+    display:flex;
+    align-items: center;
+    float:right;
+    @media (max-width:767px){
+        display:none;
+    }
+    li{
+        margin-right: 16px;
+    }
+    a{
+        text-decoration: none;
+        color:$color_grey;
+        display:block;
+        padding: 16px;
+        &:hover {
+            border-bottom: 2px solid #8D8D8D;
+        }
+    }
+    .fas {
+    margin-right: 3px;
+    }
+}
+}
+.clearfix {
+    clear: both;
+}
+.header_mb {
+    display:none;
+    a {
+        text-decoration: none;
+        margin-right: 8px;
+        .fas {
+            color:$color_grey;
+            line-height:15px;
+        }
+    }
+    .burger_cart {
+        position:relative;
+        span {
+        position:absolute;
+        border-radius: 7px;
+        border:1px solid $main_color;
+        background-color: $main_color;
+        padding:0px 3px;
+        top:-15px;
+        left:30px;
+        color:$color_white;
+        text-align: center;
+    }
+    }
+    @media (max-width:767px){
+        display:block;
+        display:flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin-top: 12px;
+        .fas {
+            margin-right: 8px;
+        }
+    }
+}
+.burger_show {
+    @media (max-width:767px){
+    max-height:0px; 
+    overflow: hidden;
+    transition:max-height 1.5s;
+    margin-top: 1px;
+    position:absolute;
+    top:51px;
+    left:0px;
+    right:0px;
+    z-index:100;
+    li {
+        background-color:#707070;
+        text-align: center;
+        padding:16px 0px;
+        border-bottom: 1px solid $color_white;
+        &:hover {
+            background-color: $color_lightgrey;
+        }
+    }
+    a {
+        @include word (20px,30px);
+        text-decoration: none;
+        color:$color_white;
+        display:block;
+        &:hover {
+            color:$color_black;
+        }
+    }  
+    }   
+}
+.burger_height_show .burger_menu {
+     max-height:500px;
+}
+.nav_bar {
+    background-color: $main_color;
+    @media (max-width:767px){
+        display:none;
+    }
+}
+.nav_bar_list {
+    @include position;
+    justify-content: flex-start;
+    li {
+        margin-right: 28px;
+        &:hover {
+            background-color: $sub_color;
+        }
+    }
+    a {
+        @include word(20px,30px);
+        text-decoration: none;
+        color:$color_white;
+        display:block;
+        padding:5px 10px;
+    }
+}
+.member {
+    display:flex;
+    margin-top: 80px;
+    margin-bottom: 60px;
+    @media (max-width:767px){
+        flex-direction: column;
+        margin-top: 40px;
+    }
+    .member_side_list {
+        width:20%;
+        color:#848484;
+        font-weight: bold;
+        @media (max-width:767px){
+            width:100%;
+        }
+        h2 {
+            @include word(20px,30px);
+            margin-bottom: 28px;
+            @media (max-width:767px){
+                display:none;
+            }
+        }
+        .member_side{
+            width:100%;
+            @media (max-width:767px){
+                display:flex;
+            }
+            li {
+                @include word(16px,24px);
+                margin-bottom: 24px;
+                margin-right: 40px;
+                @media (max-width:767px){
+                    margin-right:20px;
+                    width:33.3333%;
+                }
+                @media (max-width:414px){
+                    margin-right: 10px;
+                    text-align:center;
+                }
+                
+            }
+            a {
+                text-decoration: none;
+                color:$color_grey;
+                &:hover {
+                    border-bottom: 2px solid $main_color;
+                    }
+            }
+        } 
+    } 
+}
+.member {
+    .member_info {
+    display:flex;
+    width:80%;
+    @media (max-width:767px){
+        flex-direction: column;
+        width:100%;
+    }
+    }
+}
+.reverse {
+    display:flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    }
+.member_content {
+    width:35%;
+    color:$color_member;
+    margin-left: 30px;
+    @media (max-width:767px){
+        width:100%;
+        margin-left: 0px;
+        margin-bottom: 40px;
+    }
+    .member_user{
+        display:flex;
+        align-items: center;
+        margin-bottom: 28px;
+        .fas {
+            margin-right: 5px;
+        }
+        h3 {
+            @include word(16px,22px);
+            margin-right: 6px;
+        }
+        span {
+            @include word (20px,30px);
+            color:$color_grey;
+        }
+    }
+    .member_title {
+        display:flex;
+        align-items: center;
+        margin-bottom: 16px;
+        width:100%;
+        p {
+            width:65px;
+            margin-right: 30px;
+        }
+    }
+    .bonus_link {
+        margin-bottom: 0px;
+    }
+    small {
+        color:#A5A5A5;
+        @include word(14px,21px);
+    }
+}
+.member_edit {
+    width:65%;
+    color:#818A91;
+    @media (max-width:767px){
+        width:100%;
+    }
+    h4 {
+        @include word (16px,22px);
+        color:$color_black;
+        font-weight: bold;
+        padding-bottom: 8px;
+        border-bottom: 1px solid #818A91;
+        margin-bottom: 16px;
+    }
+    .form-group {
+        margin-bottom: 20px;
+        display:flex;
+        align-items: center;
+        .form-title {
+            width:15%;
+            @media (max-width:992px){
+                width:20%;
+            }
+            @media (max-width:414px){
+                width:30%;
+            }
+        }
+        .account_border {
+            border:none;
+        }
+        .address,.change_pwd {
+            width:85%;
+            @media (max-width:992px){
+                width:80%;
+            }
+            @media (max-width:414px){
+                width:70%;
+            }
+            .send_address_country {
+                select {
+                    width:30%;
+                    @media (max-width:414px){
+                        width:50px;
+                    }
+                }
+            }
+            .send_address_city {
+                display:flex;
+                select {
+                    width:30%;
+                    @media (max-width:414px){
+                        width:50%;
+                    }
+                }
+            } 
+            input {
+                width:100%;
+            }         
+            button {    
+                @include input_btn($main_color);
+                padding:8px 48px;
+                background-color: $main_color;
+                color:$color_white;
+                @include word (16px,22px);
+                margin-top: 16px;
+            }
+        }
+    }
+    input {
+        border-radius: 4px;
+        border:1px solid #CED4DA;
+        height:30px;
+        width:85%;
+        color:$color_member;
+            @media (max-width:992px){
+                width:80%;
+            }
+            @media (max-width:414px){
+                width:70%;
+            }
+    }
+    select {
+        height:30px;
+        border-radius: 4px;
+        border:1px solid #CED4DA;
+        color:$color_member;
+        margin-bottom: 8px;
+        margin-right: 8px;
+    }
+    .address-title {
+        align-items: flex-start;
+        margin-top: 10px;
+    }
+    
+}
+.footer-fluid {
+    background-color: $main_color;
+}
+.footer_bar {
+        @include bar;
+        h6 a{
+            @include word_hidden;
+            background-image:url(https://upload.cc/i1/2021/06/13/6sfMxS.png);
+            width:130px;
+            height:38px;
+            margin-right: 20px;
+        }
+        .footer_logo {
+        @include position;
+        span {
+            color:$color_white;
+            }
+        }
+        .footer_menu {
+        @include word(20px,30px);
+        display:flex;
+        align-items: center;
+        li {
+            padding:28px;
+        }
+        a {
+            text-decoration: none;
+            color:$color_white;
+            &:hover {
+              color:black;  
+            }
+        }
+        }
+        @media (max-width:767px){
+        .footer_logo {
+            margin: 0 auto;
+        }
+        .footer_menu {
+            display:none;
+        }
+    }
+}

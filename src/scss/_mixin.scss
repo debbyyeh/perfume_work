@@ -1,0 +1,49 @@
+// color
+$color_black:#000000;
+$color_white:#fff;
+$color_grey:#8D8D8D;
+$color_member:#818A91;
+$color_lightgrey:#E0E0E0;
+$main_color:#916000;
+$sub_color:#AC8A46;
+
+@mixin word_hidden {
+    display:block;
+    text-indent:101%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+@mixin bar {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@mixin word ($font,$line-height) {
+    font-size:$font;
+    line-height:$line-height;
+}
+@mixin btn ($font,$color){
+    display:block;
+    border-radius:30px;
+    padding:18px 50px;
+    color:$color;
+    font-size: $font;
+    border:2px solid $color;
+    background-color:transparent;
+}
+@mixin input_btn ($color){
+    border-radius:4px;
+    border: 1px solid $color;
+}
+@mixin read_more {
+    font-size: 16px;
+    line-height: 20px;
+    color:$sub_color;
+    font-weight: bold;
+    text-decoration: none;
+}
+@mixin position {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
