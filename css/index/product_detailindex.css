@@ -393,6 +393,7 @@ html, body {
   border: 1px solid #916000;
   font-size: 16px;
   line-height: 22px;
+  white-space: nowrap;
 }
 
 .intro_side .add_like_btn {
@@ -446,6 +447,10 @@ html, body {
   line-height: 24px;
 }
 
+.footer-fluid {
+  background-color: #916000;
+}
+
 .footer_bar {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -456,7 +461,6 @@ html, body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #916000;
 }
 
 .footer_bar h6 a {
