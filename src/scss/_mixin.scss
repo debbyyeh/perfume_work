@@ -23,7 +23,6 @@ $sub_color:#AC8A46;
     line-height:$line-height;
 }
 @mixin btn ($font,$color){
-    display:block;
     border-radius:30px;
     padding:18px 50px;
     color:$color;
