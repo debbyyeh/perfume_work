@@ -161,6 +161,9 @@
 }
 .product_column {
     margin-bottom: 60px;
+    @media (max-width:767px){
+        margin-bottom: 0;
+    }
 }
 .products_intro {
     @include position;
@@ -170,13 +173,18 @@
     .product_content {
         width:50%;
         padding:0px 110px;
+        @media (max-width:992px){
+            padding:0px 20px;
+        }
         @media (max-width:767px){
         width:100%;
-        padding:8px 15px 32px 15px;
+        padding:0px;
+        margin-bottom: 32px;
         }
         h2 {
             @include word(32px,48px);
             font-weight: bold;
+            margin-top: 8px;
             }
         p {
             @include word(20px,30px);
@@ -187,10 +195,10 @@
             }
     }
     .product_content_traits {
-        padding:92px 110px;
-        @media (max-width:767px){
-            padding:8px 15px 40px 15px;
-            }
+        padding:0px 110px;
+        @media (max-width:992px){
+            padding:0px 20px;
+        }
         h3 {
             @include word(24px,36px);
             font-weight: bold;
@@ -204,6 +212,7 @@
         width:100%;
         @media (max-width:767px){
             margin-top: 20px;
+            padding:18px 25px;
         }
         &:hover {
             cursor: pointer;
@@ -213,23 +222,33 @@
     }
     .product_img {
         width:50%;
+        height:555px;
         img {
-        max-width: 100%;
+        width: 100%;
+        height:100%;
+        object-fit: cover;
+        object-position: left;
         }
         @media (max-width:767px){
         width:100%;
+        height:350px;
         img {
-           width:100%; 
+            width:100%; 
             }
         }
     }
-    &.img_wrap_stretch{
-        align-items: stretch;
-        .product_img{
-            display: flex;
-            img{
-                height:100%;
-                object-fit: fill;
+    .product_img_1 {
+        width:50%;
+        height:1080px;
+        img {
+            max-width:100%;
+            height:100%;
+        }
+        @media (max-width:767px){
+            width:100%;
+            height:680px;
+            img {
+                width:100%;
             }
         }
     }
@@ -259,9 +278,7 @@
     h3 {
         @include word(24px,36px);
         font-weight: bold;
-    }
-    .word-small {
-        @include word(20px,30px);
+        white-space:nowrap;
     }
     p {
         @include word(16px,24px);
@@ -344,6 +361,7 @@
         }
         @media (max-width:767px){
             width:100%;
+            padding:0px;
         }
         h2 {
             @include word(32px,48px);
