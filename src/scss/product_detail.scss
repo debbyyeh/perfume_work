@@ -260,6 +260,7 @@ html,body {
         color:$color_white;
         border: 1px solid $main_color;
         @include word(16px,22px);
+        white-space: nowrap;
     }
     .add_like_btn {
         margin-top: 8px;
